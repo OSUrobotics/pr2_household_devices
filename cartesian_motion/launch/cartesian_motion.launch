@@ -1,0 +1,7 @@
+<launch>
+	
+	<node pkg="cartesian_motion" type="cartesian_motion.py" name="cartesian_motion" output="screen" />
+
+	<include file="$(find cartesian_motion)/launch/jtcart_ctrl.launch" />
+
+</launch>

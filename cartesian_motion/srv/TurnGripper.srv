@@ -1,0 +1,4 @@
+string which_arm  # arm to move; choose from ['left', 'right']
+float32 degrees_CW  # clockwise angle, in degrees, to turn
+---
+bool success  # did everything go OK?

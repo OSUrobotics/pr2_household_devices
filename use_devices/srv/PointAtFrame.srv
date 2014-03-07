@@ -1,0 +1,6 @@
+string which_arm  # which arm to use; choose from ['left', 'right']
+string frame  # name of frame
+float32 standoff  # approach distance from frame
+float32 speed  # movement speed in m/s
+---
+bool success

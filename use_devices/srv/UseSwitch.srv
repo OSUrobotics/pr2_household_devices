@@ -1,0 +1,7 @@
+string which_arm  # which arm to use; choose from ['left', 'right']
+string switch  # name of switch frame
+geometry_msgs/Vector3Stamped goal_offset  # vector by which to offset the gripper goal
+float32 standoff  # approach distance from switch
+string up_or_down  # which direction to flip switch; choose from ['up', 'down']
+---
+bool success  # was contact made?

@@ -1,0 +1,13 @@
+Things to run to conduct the experiment.
+
+On the robot:
+roslaunch pr2_interactive_manipulation pr2_interactive_manipulation_robot.launch
+rosrun pr2_controller_manager pr2_controller_manager start l_cart
+rosrun pr2_controller_manager pr2_controller_manager start r_cart
+rosrun cartesian_motion cartesian_motion.py  (GROUP WITH PREVIOUS TWO?)
+rosrun teleop_knobs reset_pose.py
+roslaunch sense_contact sense_contact_markers.launch
+rosrun teleop_knobs freeze_frame.bash 
+
+On the laptop:
+rosrun rviz rviz -d /home/ruebenm/.rviz/knob_pr2_teleop_ieractive.rviz

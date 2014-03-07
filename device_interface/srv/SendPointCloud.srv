@@ -1,0 +1,4 @@
+sensor_msgs/PointCloud2 cloud
+string cloud_topic
+---
+bool success

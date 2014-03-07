@@ -1,0 +1,9 @@
+string which_arm  # arm to move; choose from ['left', 'right']
+string stored_goal  # name of stored pose goal, such as 'UNTUCK' or 'READY'
+geometry_msgs/PoseStamped pose_goal  # pose goal
+float32 speed  # cartesian travel speed in m/s
+geometry_msgs/Vector3Stamped goal_offset  # vector by which to adjust gripper goals
+---
+bool success  # did we reach the goal?
+bool made_contact  # whether gripper touched something
+geometry_msgs/PoseStamped final_pose  # where did the gripper stop?

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package>
+  <name>teleop_knobs</name>
+
+  <version>0.0.0</version>
+  <description>
+
+    Starts pr2_interactive_manipulation and several helper nodes for testing knob teleop.
+
+  </description>
+
+
+
+  <maintainer email="ruebenm@onid.oregonstate.edu">
+    Matthew Rueben
+  </maintainer>
+
+  <license></license>
+
+  <url type="website">http://ros.org/wiki/pr2_household_devices</url>
+
+  <author email="ruebenm@onid.oregonstate.edu">
+    Matthew Rueben
+  </author>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rospy</build_depend>
+  <build_depend>sense_contact</build_depend>
+  <build_depend>cartesian_motion</build_depend>
+
+  <run_depend>rospy</run_depend>
+  <run_depend>sense_contact</run_depend>
+  <run_depend>cartesian_motion</run_depend>
+
+</package>

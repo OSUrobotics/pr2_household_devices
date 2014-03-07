@@ -1,0 +1,21 @@
+<launch>
+
+	<!-- USER SERVICES -->
+	<node pkg="use_devices" type="use_knob.py"   name="use_knob"   output="screen" />
+	<node pkg="use_devices" type="use_switch.py" name="use_switch" output="screen" />
+	<node pkg="use_devices" type="use_button.py" name="use_button" output="screen" />
+
+	<!-- OTHER MANIPULATION PACKAGES -->
+        <include file="$(find cartesian_motion)/launch/cartesian_motion.launch" />
+        <node pkg="sense_contact" type="sense_contact.py" name="sense_contact" output="screen" >
+	      <param name="threshold_poke" value="4000" />
+	      <param name="threshold_grab" value="500" />
+	</node>
+
+	<!-- UTILITY SERVICES -->
+	<node pkg="use_devices" type="point_at_frame.py" name="point_at_frame" output="screen" />
+
+	<!-- GRIPPER SENSOR STUFF -->
+	<include file="$(find pr2_gripper_sensor_action)/launch/pr2_gripper_sensor_actions.launch" />
+
+</launch>

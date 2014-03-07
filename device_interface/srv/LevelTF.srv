@@ -1,0 +1,4 @@
+string frame_child  # name of frame to align
+string frame_parent  # static frame, used as vertical reference
+---
+bool success

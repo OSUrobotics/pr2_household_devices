@@ -1,0 +1,13 @@
+To add a finder script:
+
+1) Write a service node in Python and save it to
+.../find_devices/scripts/find_whatever_you_want.py
+
+2) Your service name should be of the form 'find_*'
+
+3) Modify the launch file to run your node, thus advertising the
+service. The launch file is here:
+.../find_devices/launch/find_things.launch
+
+4) The main interface node will detect the new service and make it
+available to the user via the GUI.

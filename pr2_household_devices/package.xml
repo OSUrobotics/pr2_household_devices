@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package>
+  <name>pr2_household_devices</name>
+  <version>0.0.0</version>
+  <description>
+    
+    Interface for finding and manipulating household devices and their
+    controls using shared autonomy.
+
+  </description>
+
+
+
+  <maintainer email="ruebenm@onid.oregonstate.edu">
+    Matthew Rueben
+  </maintainer>
+
+  <license></license>
+
+  <url type="website">http://ros.org/wiki/pr2_household_devices</url>
+
+  <author email="ruebenm@onid.oregonstate.edu">
+    Matthew Rueben
+  </author>
+
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+
+</package>

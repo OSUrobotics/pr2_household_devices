@@ -1,0 +1,6 @@
+string device  # name of device frame
+float32[] plane_coefficients
+---
+geometry_msgs/TransformStamped frame
+float32 diameter
+float32 height

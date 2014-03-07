@@ -1,0 +1,45 @@
+<launch>
+
+  <arg name="use_right_arm" default="true" />
+  <arg name="use_left_arm"  default="true"  />
+  <arg name="sim"  default="false"  />
+
+  <arg if="$(arg use_right_arm)"      name="r_controller" value="r_cart" />
+  <arg unless="$(arg use_right_arm)"  name="r_controller" value="" />
+  <arg if="$(arg use_left_arm)"       name="l_controller" value="l_cart" />
+  <arg unless="$(arg use_left_arm)"   name="l_controller" value="" />
+
+  <node name="stop_l_cart"
+       if="$(arg use_left_arm)"
+       pkg="pr2_controller_manager" type="pr2_controller_manager"
+       args="kill $(arg l_controller)" />
+
+  <node name="stop_r_cart"
+       if="$(arg use_right_arm)"
+       pkg="pr2_controller_manager" type="pr2_controller_manager"
+       args="kill $(arg r_controller)" />
+
+  <node name="start_l"
+       if="$(arg use_left_arm)"
+       pkg="pr2_controller_manager" type="pr2_controller_manager"
+       args="start l_arm_controller" />
+
+  <node name="start_r"
+       if="$(arg use_right_arm)"
+       pkg="pr2_controller_manager" type="pr2_controller_manager"
+       args="start r_arm_controller" />
+  
+<!--  
+  <node name="spawn_jt_cartesian"
+        pkg="pr2_controller_manager" type="unspawner"
+        args="$(arg r_controller) $(arg l_controller)" />
+-->
+<!--
+  <node name="r_posture"
+        pkg="robot_mechanism_controllers" type="posture.py"
+        args="r_cart elbowupr" />
+  <node name="l_posture"
+        pkg="robot_mechanism_controllers" type="posture.py"
+        args="l_cart elbowupl" />
+-->
+</launch>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package>
+  <name>cartesian_motion</name>
+
+  <version>0.0.0</version>
+  <description>
+    
+    Uses JTCartesianController to accomplish carefully controlled
+    gripper motion for manipulating devices.
+
+  </description>
+
+
+
+  <maintainer email="ruebenm@onid.oregonstate.edu">
+    Matthew Rueben
+  </maintainer>
+
+  <license></license>
+
+  <url type="website">http://ros.org/wiki/pr2_household_devices</url>
+
+  <author email="ruebenm@onid.oregonstate.edu">
+    Matthew Rueben
+  </author>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rospy</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>robot_mechanism_controllers</build_depend>
+
+  <run_depend>rospy</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>robot_mechanism_controllers</run_depend>
+
+
+</package>

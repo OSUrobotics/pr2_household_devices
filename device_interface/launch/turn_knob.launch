@@ -1,0 +1,12 @@
+<launch>
+
+	<node pkg="device_interface" type="turn_knob.py" name="device_interface" output="screen" />
+
+	<!-- OTHER PACKAGES -->
+	<include file="$(find find_devices)/launch/find_things.launch" />
+	<include file="$(find use_devices)/launch/use_things.launch" />
+	
+	<!-- SERVICES -->
+	<node pkg="device_interface" type="broadcast_TFs.py" name="broadcast_tfs" output="screen" />
+
+</launch>

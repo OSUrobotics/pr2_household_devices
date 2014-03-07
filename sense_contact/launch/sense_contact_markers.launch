@@ -1,0 +1,12 @@
+<launch>
+
+	<!-- GRIPPER SENSOR STUFF -->
+	<include file="$(find pr2_gripper_sensor_action)/launch/pr2_gripper_sensor_actions.launch" />
+
+	<!-- PUBLISHES WHEN CONTACT OCCURS -->
+	<node pkg="sense_contact" type="sense_contact.py" name="sense_contact" output="screen"/>
+
+	<!-- PUBLISHES MARKER INDICATING CONTACT -->
+	<node pkg="sense_contact" type="contact_markers.py" name="contact_markers" output="screen"/>	      
+
+</launch>

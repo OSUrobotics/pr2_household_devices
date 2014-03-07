@@ -1,0 +1,15 @@
+<launch>
+
+	<!-- FINDER SERVICES -->
+	<node pkg="find_devices" type="find_device.py"  name="find_device"  output="screen" />	
+	<node pkg="find_devices" type="find_knob.py"    name="find_knob"    output="screen" />	
+	<node pkg="find_devices" type="find_switch.py"  name="find_switch"  output="screen" />	
+	<node pkg="find_devices" type="find_button.py"  name="find_button"  output="screen" />	
+
+	<!-- UTILITY SERVICES -->
+	<node pkg="find_devices" type="filter_cloud_by_axes"  name="filter_cloud_by_axes"  output="screen" />	
+	<node pkg="find_devices" type="plane_finder" 	      name="plane_finder" 	   output="screen" />
+	<node pkg="find_devices" type="transform_PointCloud2" name="transform_PointCloud2" output="screen" />
+	<node pkg="find_devices" type="get_knob_params"       name="get_knob_params" 	   output="screen" />
+
+</launch>

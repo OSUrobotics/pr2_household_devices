@@ -1,0 +1,5 @@
+Things to run for the pr2_device_interface knobs test.
+
+On the robot:
+roslaunch rgbd_assembler openni_node_new.launch
+roslaunch device_interface device_interface.launch (after using ssh -X)

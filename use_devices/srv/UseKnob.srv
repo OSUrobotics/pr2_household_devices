@@ -1,0 +1,6 @@
+string which_arm  # which arm to use; choose from ['left', 'right']
+string knob  # name of knob frame
+geometry_msgs/Vector3Stamped goal_offset  # vector by which to offset the gripper goal
+float32 standoff  # approach distance from knob
+---
+bool success  # was knob grasped?

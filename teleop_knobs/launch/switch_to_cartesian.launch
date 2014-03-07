@@ -1,0 +1,21 @@
+<launch>
+
+	<!-- WHICH ARM? (DEFAULTS TO RIGHT) -->
+	<arg name="side" default="r" />
+
+	<!-- STOP ARM CONTROLLER -->
+	<node name="stop_$(arg side)_arm"
+	      pkg="pr2_controller_manager"
+	      type="pr2_controller_manager"
+	      args="stop $(arg side)_arm_controller" />
+
+	<!-- START CARTESIAN CONTROLLER -->
+	<node name="start_$(arg side)_cart"
+	      pkg="pr2_controller_manager"
+	      type="pr2_controller_manager"
+	      args="spawn $(arg side)_cart" />
+
+
+</launch>
+	
+	      
