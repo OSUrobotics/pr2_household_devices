@@ -1,0 +1,4 @@
+How to build pr2_household_devices_interface:
+1) Navigate to your catkin workspace, e.g. ~/catkin_ws
+2) Type "catkin_make_isolated"
+
